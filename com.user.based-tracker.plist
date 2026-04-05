@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.user.based-tracker</string>
+
+  <key>ProgramArguments</key>
+  <array>
+    <!-- Replace /Users/YOUR_USER with your actual home directory -->
+    <string>/Users/YOUR_USER/based_tracker/venv/bin/python</string>
+    <string>/Users/YOUR_USER/based_tracker/tracker.py</string>
+  </array>
+
+  <key>EnvironmentVariables</key>
+  <dict>
+    <key>TELEGRAM_BOT_TOKEN</key>
+    <string>YOUR_BOT_TOKEN_HERE</string>
+    <key>TELEGRAM_CHAT_ID</key>
+    <string>YOUR_CHAT_ID_HERE</string>
+    <key>CHECK_INTERVAL_SEC</key>
+    <string>120</string>
+  </dict>
+
+  <key>RunAtLoad</key>
+  <true/>
+
+  <key>KeepAlive</key>
+  <true/>
+
+  <!-- Logs — adjust paths as needed -->
+  <key>StandardOutPath</key>
+  <string>/Users/YOUR_USER/based_tracker/tracker.log</string>
+  <key>StandardErrorPath</key>
+  <string>/Users/YOUR_USER/based_tracker/tracker.err</string>
+</dict>
+</plist>
